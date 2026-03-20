@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-obsidian-950 text-ivory-200 antialiased selection:bg-ember-400 selection:text-white;
+  }
+
+  h1, h2, h3, .font-display {
+    @apply tracking-tightest;
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+  }
+
+  body, .font-body {
+    @apply tracking-wide;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .bg-grain {
+    position: relative;
+  }
+  .bg-grain::after {
+    content: "";
+    @apply absolute inset-0 pointer-events-none z-[1] opacity-[0.035];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 128px 128px;
+  }
+
+  .bg-botanical {
+    position: relative;
+  }
+  .bg-botanical::before {
+    content: "";
+    @apply absolute inset-0 pointer-events-none z-0 opacity-[0.025];
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M60 10C65 30 55 50 60 70C65 90 75 110 60 110C45 110 55 90 60 70C65 50 55 30 60 10Z' fill='white'/%3E%3Cpath d='M10 60C30 65 50 55 70 60C90 65 110 75 110 60C110 45 90 55 70 60C50 65 30 55 10 60Z' fill='white'/%3E%3C/svg%3E");
+    background-size: 240px 240px;
+  }
+
+  .shimmer-gold {
+    background: linear-gradient(90deg, #D4AF37 0%, #FFF8DD 40%, #D4AF37 60%, #A48623 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .surface-highlight {
+    position: relative;
+  }
+  .surface-highlight::before {
+    content: "";
+    @apply absolute inset-0 rounded-[inherit] pointer-events-none;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent, rgba(255, 255, 255, 0.04));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  .shadow-premium {
+    box-shadow: 
+      0 2px 4px rgba(0,0,0,0.08),
+      0 4px 12px rgba(0,0,0,0.12),
+      0 12px 24px rgba(0,0,0,0.18);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-obsidian-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-400 rounded-sm;
+}

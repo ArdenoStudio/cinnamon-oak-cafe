@@ -202,7 +202,7 @@ const ArdenoPhase = memo<{ exiting: boolean; flashRed: boolean; progress: number
     <div style={{ ...FULL_COVER, background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.85) 100%)", pointerEvents: "none" }} />
     <div style={{ ...FULL_COVER, background: "radial-gradient(circle at 50% 45%, rgba(200,132,90,0.15) 0%, transparent 50%)", animation: "avl-breathe 5s ease-in-out infinite", pointerEvents: "none" }} />
     <div style={CENTER_FLEX}>
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18, position: "relative", zIndex: 2, transform: "translateY(-4vh)" }}>
         <div style={{ width: 80, height: 80, marginBottom: 8, opacity: 0, animation: "avl-crownReveal 1.4s cubic-bezier(0.16,1,0.3,1) 0.1s forwards" }}>
           <svg viewBox="200 580 360 340" style={{ width: "100%", height: "100%", overflow: "visible" }}>
             <SvgDefs />

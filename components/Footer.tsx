@@ -1,6 +1,6 @@
 import React from 'react';
 import { Instagram } from './Icons';
-import ArdenoLogo from './ArdenoLogo';
+import ArdenoProductionCredit from './ArdenoProductionCredit';
 import { motion } from 'framer-motion';
 import Magnetic from './Magnetic';
 
@@ -107,37 +107,13 @@ const Footer: React.FC = () => {
 
       {/* Bottom bar — Ardeno Studio credit */}
       <div className="border-t border-white/[0.05] pb-24 md:pb-0">
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-6 md:px-16 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
           <p className="text-[10px] font-body uppercase tracking-[0.2em] text-ivory-200/20">
             © {year} Cinnamon Oak Cafe. All rights reserved.
           </p>
-
-          {/* Ardeno Studio credit — right side */}
-          <motion.a
-            href="https://ardenostudio.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.7, 0, 0.2, 1] }}
-            className="group flex items-center gap-4 py-2"
-            data-cursor-text="VISIT"
-          >
-            <span className="text-[10px] font-body font-medium uppercase tracking-[0.25em] text-ivory-200/20 group-hover:text-ivory-200/60 transition-all duration-700">
-              Designed &amp; Built by
-            </span>
-            <div className="relative">
-              <Magnetic strength={0.3}>
-                <div className="relative">
-                  <ArdenoLogo variant="dark" scale={0.48} className="opacity-70 group-hover:opacity-100 transition-all duration-700 filter group-hover:drop-shadow-[0_0_15px_rgba(255,51,1,0.2)]" />
-                </div>
-              </Magnetic>
-              {/* Subtle accent glow behind logo on hover */}
-              <div className="absolute inset-0 bg-[#ff3301]/0 group-hover:bg-[#ff3301]/5 blur-2xl rounded-full transition-all duration-1000 -z-10" />
-            </div>
-          </motion.a>
         </div>
+        
+        <ArdenoProductionCredit />
       </div>
     </footer>
   );

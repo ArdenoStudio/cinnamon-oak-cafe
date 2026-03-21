@@ -1,20 +1,8 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Cinnamon Oak Cafe | A Shared Vision for Digital Hospitality
 
-# Run and deploy your AI Studio app
+With Cinnamon Oak Cafe, our goal was to capture the tactile, earthy soul of an artisanal tea house and specialty coffee destination. This isn't just a menu site; it's a digital translation of the intention and craft found in the heart of Colombo.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/temp/1
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 🌿 The Concept
+- **Organic Luxury:** We chose a palette of Forest Green and warm Ivory to mirror the aroma of hand-poured coffee.
+- **Tactile Flow:** Every transition was designed to feel as smooth as ceremonial matcha.
+- **Craft Focused:** We wanted the photography and layout to emphasize the artisanal process above all else.

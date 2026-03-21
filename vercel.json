@@ -1,4 +1,7 @@
 {
   "framework": "vite",
-  "name": "ardeno-cinnamon-cafe"
+  "name": "ardeno-cinnamon-oak",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
